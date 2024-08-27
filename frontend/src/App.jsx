@@ -46,7 +46,7 @@ function App() {
     <>
       <div>
         <h1 className="text-4xl font-bold underpne text-red-600 border-4 border-solid border-indigo-500">
-          Sporkable
+          Sporkable!
         </h1>
       </div>
       <div>{listItems}</div>
