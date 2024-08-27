@@ -1,6 +1,7 @@
 // import { useState } from "react";
 
 import "./App.css";
+import { Navbar } from "./components/Navbar";
 
 const testRecipes = [
   {
@@ -44,15 +45,13 @@ function App() {
 
   return (
     <>
+    <Navbar/>
       <div>
         <h1 className="text-4xl font-bold underpne text-red-600 border-4 border-solid border-indigo-500">
           Sporkable!
         </h1>
       </div>
       <div>{listItems}</div>
-      <button className="border border-red-500 text-6xl">!</button>
-      <button>!</button>
-      <button>!</button>
     </>
   );
 }
