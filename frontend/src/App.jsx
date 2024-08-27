@@ -50,7 +50,7 @@ function App() {
         </h1>
       </div>
       <div>{listItems}</div>
-      <button>delete</button>
+      <button>!</button>
     </>
   );
 }
