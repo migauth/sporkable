@@ -50,6 +50,8 @@ function App() {
         </h1>
       </div>
       <div>{listItems}</div>
+      <button className="border border-red-500 text-6xl">!</button>
+      <button>!</button>
       <button>!</button>
     </>
   );
