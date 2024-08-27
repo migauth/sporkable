@@ -32,17 +32,24 @@ const testRecipes = [
 function App() {
   // const [count, setCount] = useState(0)
   const listItems = testRecipes.map((recipe) => (
-    <li key={recipe.id}>{recipe.title} ~ By {recipe.author}</li>
+    <div key={recipe.id}>
+      <h1 className="text-4xl">{recipe.title}</h1>
+      <h2 className="text-2xl">Author: {recipe.author}</h2>
+      <p>{recipe.image_url}</p>
+      <p>Ingredients: {recipe.ingredients}</p>
+      <p>Cooking instructions: {recipe.instructions}</p>
+      <hr />
+    </div>
   ));
 
   return (
     <>
       <div>
-        <h1 className="text-4xl font-bold underline text-red-600">
+        <h1 className="text-4xl font-bold underpne text-red-600 border-4 border-solid border-indigo-500">
           Sporkable!
         </h1>
       </div>
-      <ul>{listItems}</ul>
+      <div>{listItems}</div>
     </>
   );
 }
