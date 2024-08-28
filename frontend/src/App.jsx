@@ -1,7 +1,7 @@
-// import { useState } from "react";
+import { useState } from "react";
 
 import "./App.css";
-import { Navbar } from "./components/Navbar";
+import Navbar from "./components/Navbar";
 
 const testRecipes = [
   {
@@ -30,8 +30,16 @@ const testRecipes = [
   },
 ];
 
+
+
 function App() {
-  // const [count, setCount] = useState(0)
+  const [currentPage, setCurrentPage] = useState("home")
+
+  function handlePageChange(page) {
+    setCurrentPage(page)
+  }
+
+
   const listItems = testRecipes.map((recipe) => (
     <div key={recipe.id}>
       <h1 className="text-4xl">{recipe.title}</h1>
@@ -45,7 +53,7 @@ function App() {
 
   return (
     <>
-    <Navbar/>
+    <Navbar handlePageChange={handlePageChange}/>
       <div>
         <h1 className="text-4xl font-bold underpne text-red-600 border-4 border-solid border-indigo-500">
           Sporkable!
